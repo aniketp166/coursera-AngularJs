@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <script src="angular.min.js"></script>
+    <script src="app.js"></script>
+
+    <title>Lecture 02 - Single Page Web Applications with AngularJS</title>
+  </head>
+  <body ng-app="myFirstApp">
+    <h1>My AngularJS app</h1>
+    <div ng-controller="MyFirstController">
+      <br />
+      {{name}} {{sayHello()}} <br />
+      <input type="text" ng-model="name" /> <br />
+      data binding for $scope.name {{name}} <br />
+    </div>
+    <h1>Name Calculator</h1>
+    <div ng-controller="NameCalculator">
+      your name :
+      <input type="text" ng-model="name" ng-keyup="displayNumeric();" />
+      Numeric value is : {{totalValue}}
+    </div>
+  </body>
+</html>
